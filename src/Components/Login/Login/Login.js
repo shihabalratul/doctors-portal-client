@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../../App';
 import loginBg from '../../../images/loginBg.png';
 import firebase from "firebase/app";
@@ -28,7 +28,11 @@ const Login = () => {
 				var token = credential.accessToken;
 				// The signed-in user info.
 				const user = result.user;
-				setLoggedInUser(user);
+				const userInfo = {
+					name: user.displayName,
+					email: user.email
+				}
+				setLoggedInUser(userInfo);
 
 
 				history.replace(from);

@@ -8,14 +8,13 @@ import {
 } from "react-router-dom";
 import Home from "./Components/Home/Home/Home";
 import Appointment from "./Components/Appointment/Appointment/Appointment";
-import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 import Login from "./Components/Login/Login/Login";
+import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  console.log(loggedInUser.email)
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router className="App">
@@ -26,10 +25,10 @@ function App() {
           <Route path="/appointment">
             <Appointment />
           </Route>
-
-          <PrivateRoute path="/login">
+          <Route path="/login">
             <Login />
-          </PrivateRoute>
+          </Route>
+
         </Switch>
       </Router>
     </UserContext.Provider>

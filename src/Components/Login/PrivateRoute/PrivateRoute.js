@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import { UserContext } from '../../../App';
 
-const PrivateRoute = ({ children, ...rest }) => {
+function PrivateRoute({ children, ...rest }) {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
@@ -31,6 +31,6 @@ const PrivateRoute = ({ children, ...rest }) => {
 			}
 		/>
 	);
-};
+}
 
 export default PrivateRoute;
