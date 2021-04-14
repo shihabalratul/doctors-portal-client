@@ -1,0 +1,46 @@
+.header-container {
+    height:800px;
+    position:relative;
+	background-image: url('../../../images/chair-bg.png');
+	background-size: cover ;
+	color:#3A4256 ;
+	margin-bottom: 90px;
+}
+.header-container::after{
+    height:765px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 31%;
+    right: 0;
+    background-color: #3A4256;
+	z-index: -50;
+}
+.light-text{
+	color: #3a425688;
+	font-weight: 400;
+}
+
+.back-gradient{
+	background:linear-gradient(-45deg,#1CC7C1,#02ffd5);
+	padding: 10px;
+	color: white;
+
+}
+.back-dark{
+	background-color: #3A4256;
+	padding: 10px;
+	color: white;
+}
+.infoIcon{
+	font-size: 5em;
+}
+
+.info-container{
+
+	margin: 0 -5px;
+	height:120px;
+	align-items: center;
+	border-radius: 5px;
+
+}

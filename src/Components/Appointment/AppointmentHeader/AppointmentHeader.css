@@ -1,0 +1,8 @@
+.appointment-header{
+	height:800px;
+    position:relative;
+	background-image: url('../../../images/chair-bg.png');
+	background-size: cover ;
+	color:#3A4256 ;
+	margin-bottom: 90px;
+}
